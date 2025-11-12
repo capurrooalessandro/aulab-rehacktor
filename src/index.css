@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@import "tailwindcss";
+
+@theme {
+	--font-roboto: "Roboto", sans-serif;
+	--font-aldrich: "Aldrich", sans-serif;
+	--breakpoint-xs: 30rem;
+}
+
+@layer utilities {
+	@media (hover: none) and (pointer: coarse) {
+		.touch-hover:active, .touch-hover:focus-within {
+			@apply [&>div>div>*]:opacity-100 [&>div>*]:opacity-100 [&>div>div>button]:translate-y-0 
+			[&>div>div>p]:translate-y-0 [&>div>p]:translate-y-0 [&>div>h2]:translate-y-0 
+			[&>figure>img]:scale-137 [&>figure>img]:brightness-32
+		}
+	}
+}
+
+@plugin "daisyui";
