@@ -24,7 +24,7 @@ export default function GameCard({ game }) {
             [&>figure>*]:transition [&>figure>*]:duration-350 [&>figure>*]:ease-in-out [&>figure>img]:brightness-68 
             [&>figure>img]:scale-130 hover:[&>figure>img]:scale-135 hover:[&>figure>img]:brightness-32
 
-            h-60 md:mx-auto sm:mx-20 mx-5"
+            h-100 w-auto mx-auto "
         >
             <figure>
                 <img
