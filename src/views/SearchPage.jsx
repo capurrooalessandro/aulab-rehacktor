@@ -9,7 +9,7 @@ export default function SearchPage() {
         <>
             <SearchHeader />
             <GoBackBtn />
-            <section>
+            <section aria-label="Card section">
                 <GameList>
                     {
                         games.map((game) => {

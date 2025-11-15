@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="footer sm:footer-horizontal bg-base-100 text-neutral-content text-center items-center px-7 py-[44px] text-[17px]">
+        <footer aria-label="Footer" className="footer sm:footer-horizontal bg-base-100 text-neutral-content text-center items-center px-7 py-[44px] text-[17px]">
             <aside className="grid-flow-col items-center md:justify-self-start justify-self-center">
                 <p>Copyright © {new Date().getFullYear()} Capurro Alessandro - all rights reserved.</p>
             </aside>

@@ -9,7 +9,7 @@ export default function GenrePage() {
         <>
             <GenreHeader />
             <GoBackBtn/>
-            <section>
+            <section aria-label="Card section">
                 <GameList>
                     {
                         games.map((game) => {

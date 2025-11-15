@@ -4,11 +4,11 @@ export default function GameCard({ game }) {
     return (
         <article
             tabIndex={0}
-            className="card bg-base-100 image-full touch-hover [&>div>*]:text-neutral-content 
+            className="card bg-base-100 image-full touch-hover [&>div>*]:text-white
 
             [&>div>div>*]:opacity-0 hover:[&>div>div>*]:opacity-100 [&>div>div>*]:transition 
-            lg:[&>div>div>button]:translate-1 lg:hover:[&>div>div>button]:translate-0 
-            [&>div>div>button]:translate-y-1 hover:[&>div>div>button]:translate-y-0
+            lg:[&>div>div>a]:translate-1 lg:hover:[&>div>div>a]:translate-0 
+            [&>div>div>a]:translate-y-1 hover:[&>div>div>a]:translate-y-0
             [&>div>div>*]:duration-250 [&>div>div>*]:ease-in-out lg:[&>div>div>p]:translate-x-0 
             lg:hover:[&>div>div>p]:translate-x-1 [&>div>div>p]:translate-y-1 hover:[&>div>div>p]:translate-y-0
             
@@ -23,9 +23,8 @@ export default function GameCard({ game }) {
             [&>div>h2]:duration-250 [&>div>h2]:ease-in-out [&>div>h2]:-translate-y-[2.1px] 
             hover:[&>div>h2]:translate-y-0 
 
-            [&>figure>*]:transition [&>figure>*]:duration-350 [&>figure>*]:ease-in-out [&>figure>img]:brightness-68 
-            [&>figure>img]:scale-130 hover:[&>figure>img]:scale-135 hover:[&>figure>img]:brightness-32 
-
+            [&>figure>*]:transition [&>figure>*]:duration-350 [&>figure>*]:ease-in-out [&>figure>*]:brightness-65 
+            [&>figure>*]:scale-130 hover:[&>figure>*]:scale-135 hover:[&>figure>*]:brightness-28 
             w-full md:aspect-16/10 xs:aspect-10/6 aspect-8/6"
         >
             <figure>
@@ -34,6 +33,7 @@ export default function GameCard({ game }) {
                     alt={`${game.name}`}
                     className="aspect-video bg-cover"
                 />
+                <figcaption className="sr-only">{`Card videogioco (${game.name})`}</figcaption>
             </figure>
             <div className="card-body gap-[5.5px] md:p-5 p-4.5 wrap-anywhere">
                 <h2 className="card-title 2xl:text-[24px] md:text-[20px] text-[19px]">{game.name}</h2>
@@ -61,6 +61,7 @@ export default function GameCard({ game }) {
                                 key={i}
                                 className="mask mask-star-2 bg-white aria-current:bg-orange-400 border border-base-content/20"
                                 aria-current={i < game.rating - 1 ? "true" : "false"}
+                                aria-label={i > 0 ? `${i + 1} stars` : `${i + 1} star` }
                             />
                         ))
                     }

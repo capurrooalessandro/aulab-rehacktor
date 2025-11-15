@@ -10,7 +10,7 @@ export default function DetailPage() {
         <>
             <Navbar />
             <main>
-            <GoBackBtn/>
+                <GoBackBtn/>
                 <DetailSection game={game} />
             </main>
             <Footer />
