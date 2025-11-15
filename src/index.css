@@ -16,6 +16,13 @@
 			[&>figure>img]:scale-137 [&>figure>img]:brightness-32
 		}
 	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+    }
 }
 
-@plugin "daisyui";
+@plugin "daisyui"{
+	themes: dark --default;
+}

@@ -16,12 +16,12 @@ export default function Layout() {
                         <label 
                             htmlFor="genres-drawer" 
                             className="btn btn-link text-neutral-content hover:brightness-70 transition 
-                                duration-100 ease-linear p-0 h-11.5 w-11.5 md:h-13 md:w-13 fixed left-3 bottom-3 z-2"
+                                duration-100 ease-linear p-0 h-14 w-14 md:h-16 md:w-16 fixed lg:left-1 left-0.5 lg:top-23.5 bottom-1 z-2"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                width="54"
-                                height="54"
+                                width="58"
+                                height="58"
                                 viewBox="0 0 24 24"
                                 fill="#1D232A"
                                 stroke="currentColor"

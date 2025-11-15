@@ -1,55 +1,18 @@
-import { useState } from "react"
 import { NavLink } from "react-router"
 
 export default function Navbar() {
-    const [open, setOpen] = useState(false);
 
     return (
         <header className="sticky top-0 z-50">
             <nav
-                className="navbar bg-base-100 shadow-sm relative lg:px-6.5 px-3 lg:py-3.5 py-4.5"
+                className="navbar bg-base-100 shadow-sm relative lg:px-6.5 px-3 lg:py-6.5 py-5.5"
                 role="navigation"
                 aria-label="Primary"
             >
                 <section className="navbar-start">
-                    <NavLink className="font-medium text-2xl hidden lg:inline-flex" to="/">
+                    <NavLink className="font-medium text-[22.5px] inline-flex font-aldrich uppercase pt-1.5" to="/">
                         Rehacktor
                     </NavLink>
-                    <button
-                        type="button"
-                        className="btn btn-link text-white px-1 lg:hidden"
-                        aria-controls="mobile-nav"
-                        aria-expanded={open}
-                        aria-label={open ? "Close menu" : "Open menu"}
-                        onClick={() => setOpen((prev) => !prev)}
-                    >
-                        {open ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path strokeLinecap="round" strokeWidth="2" d="M4 4L22 22M22 4L4 22" />
-                            </svg>
-                        ) : (
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6"
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 6h24m-24 8h24m-24 8h21" />
-                            </svg>
-                        )}
-                    </button>
-                </section>
-                <section className="navbar-center">
-                    <NavLink className="font-medium text-2xl lg:hidden inline-flex" to="/">
-                        Rehacktor
-                    </NavLink>
-                    <ul className="menu menu-horizontal text-[18px] px-1 hidden lg:flex">
-                        <li className="px-1">
-                            <NavLink
-                                to="/"
-                                className="aria-[current=page]:bg-neutral-600 hover:bg-neutral-700"
-                            >
-                                Home
-                            </NavLink>
-                        </li>
-                    </ul>
                 </section>
                 <section className="navbar-end">
                     <div className="dropdown dropdown-end">
@@ -72,22 +35,6 @@ export default function Navbar() {
                             <li><a>Logout</a></li>
                         </ul>
                     </div>
-                </section>
-                <section
-                    id="mobile-nav"
-                    className={`lg:hidden absolute inset-x-0 top-full ${open ? "block" : "hidden"}`}
-                >
-                    <ul className="menu w-full bg-base-100 border-t border-t-base-200 shadow p-3 text-[16px]">
-                        <li>
-                            <NavLink
-                                to="/"
-                                className="flex justify-center aria-[current=page]:bg-neutral-600 hover:bg-neutral-700"
-                                onClick={() => setOpen(false)}
-                            >
-                                Home
-                            </NavLink>
-                        </li>
-                    </ul>
                 </section>
             </nav>
         </header>

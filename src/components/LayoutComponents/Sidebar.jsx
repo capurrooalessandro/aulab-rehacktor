@@ -1,14 +1,15 @@
-import { Link } from "react-router"
+import { NavLink } from "react-router"
 
 export default function Sidebar({ genres }) {
     return (
         <>
-            <label htmlFor="genres-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+            <label htmlFor="genres-drawer" aria-label="close sidebar" className="drawer-overlay xs:backdrop-blur-xs"></label>
             <ul className="menu bg-base-200 min-h-full xs:w-100 w-screen p-0 text-[16px]">
                 <div className="p-6 mb-2 flex justify-between items-center w-full bg-base-100 sticky top-0 z-1">
                     <h2 className="font-bold text-[25px]">Lista di generi</h2>
                     <label 
-                            htmlFor="genres-drawer" 
+                            htmlFor="genres-drawer"
+                            aria-label="close sidebar" 
                             className="btn btn-circle shadow-none text-neutral-content border-0 [&>svg]:brightness-100 hover:[&>svg]:brightness-90"
                         >
                             <svg
@@ -30,7 +31,7 @@ export default function Sidebar({ genres }) {
                     genres.map((genre) => {
                         return (
                             <li className="px-2 py-1" key={genre.id}>
-                                <Link>{genre.name}</Link>
+                                <NavLink className="aria-[current=page]:bg-neutral-600" to={`/genre/${genre.slug}`}>{genre.name}</NavLink>
                             </li>
                         )
                     })
