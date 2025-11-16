@@ -11,11 +11,11 @@ export default function Layout() {
             <Navbar />
             <main>
                 <section className="drawer">
-                    <input id="genres-drawer" type="checkbox" className="drawer-toggle" />
+                    <input id="genres-drawer" type="checkbox" className="drawer-toggle"/>
                     <div className="drawer-content">
                         <label 
                             htmlFor="genres-drawer" 
-                            className="btn btn-link text-neutral-content hover:brightness-70 transition 
+                            className="btn btn-link text-neutral-content hover:brightness-80 transition
                                 duration-100 ease-linear p-0 h-14 w-14 md:h-16 md:w-16 fixed lg:left-1 left-0.5 lg:bottom-1 bottom-0.5 z-2"
                         >
                             <svg

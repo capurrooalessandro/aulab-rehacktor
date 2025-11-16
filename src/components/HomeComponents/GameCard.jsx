@@ -4,27 +4,32 @@ export default function GameCard({ game }) {
     return (
         <article
             tabIndex={0}
-            className="card bg-base-100 image-full touch-hover [&>div>*]:text-white
+            className="card bg-base-100 image-full touch-hover [&>div>*]:text-white outline-2 outline-solid
 
-            [&>div>div>*]:opacity-0 hover:[&>div>div>*]:opacity-100 [&>div>div>*]:transition 
-            lg:[&>div>div>a]:translate-1 lg:hover:[&>div>div>a]:translate-0 
-            [&>div>div>a]:translate-y-1 hover:[&>div>div>a]:translate-y-0
+            [&>div>div>*]:opacity-0 hover:[&>div>div>*]:opacity-100 focus-within:[&>div>div>*]:opacity-100 [&>div>div>*]:transition 
+            lg:[&>div>div>a]:translate-1 lg:hover:[&>div>div>a]:translate-0 lg:focus-within:[&>div>div>a]:translate-0
+            [&>div>div>a]:translate-y-1 hover:[&>div>div>a]:translate-y-0 focus-within:[&>div>div>a]:translate-y-0
             [&>div>div>*]:duration-250 [&>div>div>*]:ease-in-out lg:[&>div>div>p]:translate-x-0 
-            lg:hover:[&>div>div>p]:translate-x-1 [&>div>div>p]:translate-y-1 hover:[&>div>div>p]:translate-y-0
+            lg:hover:[&>div>div>p]:translate-x-1 lg:focus-within:[&>div>div>p]:translate-x-1
+            [&>div>div>p]:translate-y-1 hover:[&>div>div>p]:translate-y-0 focus-within:[&>div>div>p]:translate-y-0
             
-            lg:[&>div>div>div]:translate-x-0 
-            lg:hover:[&>div>div>div]:translate-x-1 [&>div>div>div]:translate-y-1 hover:[&>div>div>div]:translate-y-0
+            lg:[&>div>div>div]:translate-x-0 lg:hover:[&>div>div>div]:translate-x-1
+            lg:focus-within:[&>div>div>div]:translate-x-1 [&>div>div>div]:translate-y-1 
+            hover:[&>div>div>div]:translate-y-0 focus-within:[&>div>div>div]:translate-y-0
             
-            [&>div>p]:opacity-0 hover:[&>div>p]:opacity-100 [&>div>p]:transition lg:[&>div>p]:-translate-[2.1px] 
-            lg:hover:[&>div>p]:translate-0 lg:[&>div>p]:duration-300 [&>div>p]:duration-250 
+            [&>div>p]:opacity-0 hover:[&>div>p]:opacity-100 focus-within:[&>div>p]:opacity-100  
+            [&>div>p]:transition lg:[&>div>p]:-translate-[2.1px] lg:hover:[&>div>p]:translate-0 
+            lg:focus-within:[&>div>p]:translate-0 lg:[&>div>p]:duration-300 [&>div>p]:duration-250 
             [&>div>p]:ease-in-out [&>div>p]:-translate-y-[2.1px] hover:[&>div>p]:translate-y-0 
+            focus-within:*::[&>div>p]:translate-y-0 
 
             [&>div>h2]:transition lg:[&>div>h2]:-translate-[1.9px] lg:hover:[&>div>h2]:translate-0 
-            [&>div>h2]:duration-250 [&>div>h2]:ease-in-out [&>div>h2]:-translate-y-[2.1px] 
-            hover:[&>div>h2]:translate-y-0 
+            lg:focus-within:[&>div>h2]:translate-0 [&>div>h2]:duration-250 [&>div>h2]:ease-in-out 
+            [&>div>h2]:-translate-y-[2.1px] hover:[&>div>h2]:translate-y-0 focus-within:[&>div>h2]:translate-y-0
 
             [&>figure>*]:transition [&>figure>*]:duration-350 [&>figure>*]:ease-in-out [&>figure>*]:brightness-65 
             [&>figure>*]:scale-130 hover:[&>figure>*]:scale-135 hover:[&>figure>*]:brightness-28 
+            focus-within:[&>figure>*]:scale-135 focus-within:[&>figure>*]:brightness-28 
             w-full md:aspect-16/10 xs:aspect-10/6 aspect-8/6"
         >
             <figure>
