@@ -11,7 +11,7 @@ export default function SearchHeader() {
                 <div className="hero-content text-neutral-content text-center">
                     <div className="max-w-lg">
                         <div className="font-aldrich lg:max-w-2xl sm:max-w-lg">
-                            <h1 className="font-semibold mb-0 lg:text-[55px] text-[45px] uppercase">
+                            <h1 className="font-semibold mb-0 lg:text-[55px]/20 text-[45px]/16.5 uppercase">
                                 Risultati per: <em className="font-[1000] normal-case">"{slug}"</em>
                             </h1>
                         </div>

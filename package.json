@@ -10,12 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.81.1",
+    "@supabase/supabase-js": "^2.83.0",
     "@tailwindcss/vite": "^4.1.17",
     "daisyui": "^5.4.7",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-form-hook": "^0.0.1",
+    "react-hook-form": "^7.66.0",
     "react-router": "^7.9.5",
     "tailwindcss": "^4.1.17"
   },

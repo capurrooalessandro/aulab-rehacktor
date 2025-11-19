@@ -28,10 +28,10 @@ export default function HomeHeader() {
                 <div className="hero-content text-neutral-content text-center">
                     <div className="max-w-2xl">
                         <div className="font-aldrich lg:max-w-2xl sm:max-w-lg">
-                            <h1 className="font-[1000] mb-0 lg:text-[55px] text-[45px] uppercase">Rehacktor</h1>
-                            <p className="md:mb-5 mb-4 lg:text-[32px] text-[28px]">
+                            <h1 className="font-[1000] lg:mb-1.5 mb-2.5 lg:text-[55px] text-[45px] uppercase">Rehacktor</h1>
+                            <h2 className="md:mb-5 mb-4 lg:text-[32px]/11 text-[28px]/10">
                                 Cerca, scopri e recensisci i tuoi giochi preferiti.
-                            </p>
+                            </h2>
                         </div>
                         <div className="join">
                             <div>
