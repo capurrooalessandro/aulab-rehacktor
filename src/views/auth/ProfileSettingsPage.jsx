@@ -86,8 +86,8 @@ export default function ProfileSettingsPage() {
                 {
                     user && profile && (
                         <>
-                            <header className="flex flex-col justify-center text-center w-full h-[26vh]" aria-label="Header impostazioni">
-                                <h1 className="md:text-[45px] text-[40px] font-aldrich text-center uppercase">Impostazioni:</h1>
+                            <header className="flex flex-col justify-center text-center w-full lg:mb-[200px] mb-[140px]" aria-label="Header impostazioni">
+                                <h1 className="2xl:text-[55px] md:text-[45px] text-[40px] font-aldrich text-center uppercase">Impostazioni:</h1>
                             </header>
                             <div className="flex lg:flex-row-reverse flex-col w-full gap-6">
                                 <form className="md:self-center w-full" onSubmit={handleAvatarSubmit} aria-label="Form modifica avatar">

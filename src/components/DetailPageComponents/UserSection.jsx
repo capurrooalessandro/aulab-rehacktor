@@ -46,7 +46,7 @@ export default function UserSection({ game, profile_id }) {
                             !isFavourite && (
                                 <div className="rating">
                                     <div
-                                        className="mask mask-heart cursor-pointer bg-red-400 brightness-50 hover:brightness-65 active:2xl:size-18 2xl:size-18 active:md:size-16 md:size-16 size-14 transition-all ease-in-out duration-100"
+                                        className="mask mask-heart cursor-pointer bg-red-400 brightness-50 hover:brightness-65 active:2xl:size-18 2xl:size-18 active:md:size-16 md:size-16 size-14 transition-all ease-in-out duration-250"
                                         aria-label="Aggiungi ai preferiti"
                                         aria-current="true"
                                         onClick={addGame}
@@ -56,7 +56,7 @@ export default function UserSection({ game, profile_id }) {
                                 <>
                                     <div className="rating">
                                         <div
-                                            className="mask mask-heart cursor-pointer bg-red-400 brightness-100 hover:brightness-85 2xl:size-20 md:size-18 size-16 active:2xl:size-20 active:md:size-18 transition-all ease-in-out duration-100"
+                                            className="mask mask-heart cursor-pointer bg-red-400 brightness-100 hover:brightness-85 2xl:size-20 md:size-18 size-16 active:2xl:size-20 active:md:size-18 transition-all ease-in-out duration-250"
                                             aria-label="Rimuovi dai preferiti"
                                             aria-current="true"
                                             onClick={removeGame}

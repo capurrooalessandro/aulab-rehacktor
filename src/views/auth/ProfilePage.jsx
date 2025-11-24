@@ -49,7 +49,7 @@ export default function ProfilePage() {
                 {user && profile && (
                     <>
                         <header className="flex flex-col items-center w-full pb-7" aria-label="Header profilo">
-                            <h1 className="md:text-[45px] text-[40px] font-aldrich text-center uppercase mb-10">Dettagli profilo:</h1>
+                            <h1 className="2xl:text-[55px] md:text-[45px] text-[40px] font-aldrich text-center uppercase lg:mb-[160px] mb-[120px]">Dettagli profilo:</h1>
                             <figure className="w-auto rounded-full overflow-hidden mb-3">
                                 <img
                                     src={avatar ?? defaultIcon}

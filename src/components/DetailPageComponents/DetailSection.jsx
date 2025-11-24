@@ -47,7 +47,7 @@ export default function DetailSection({ game }) {
 						</div>
 					</header>
 
-					<aside className="card bg-base-100/30 mb-5 backdrop-blur-sm text-base-content 2xl:size-90 flex flex-col self-center w-full lg:w-80 lg:h-76 h-50 shrink-0 text-center" aria-label="Rating card">
+					<aside className="card bg-base-100/30 mb-5 backdrop-blur-sm text-base-content 2xl:size-90 flex flex-col self-center w-full lg:w-80 lg:h-76 h-60 shrink-0 text-center" aria-label="Rating card">
 						<div className="card-body items-stretch justify-between lg:p-6 p-4 lg:py-4 py-2.5">
 							<h2 className="font-bold lg:text-[22px] text-[19px]">Rating:</h2>
 							<div>
