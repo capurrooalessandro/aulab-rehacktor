@@ -1,25 +1,42 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router"
+import defaultIcon from "../../assets/images/icons/avatar.png"
 import { UserContext } from "../../context/UserContext";
+import supabase from "../../database/supabase";
 
 export default function Navbar() {
-    const { user, signOut } = useContext(UserContext);
+    const { user, profile, signOut } = useContext(UserContext);
+    const [avatar, setAvatar] = useState();
     const navigateTo = useNavigate();
+
+    const downloadAvatar = async () => {
+        if (profile) {
+            const { data, error } = await supabase.storage
+                .from("avatars")
+                .download(profile.avatar_url);
+            const url = URL.createObjectURL(data);
+            setAvatar(url);
+        }
+    }
 
     const handleLogout = async () => {
         await navigateTo("/");
         signOut();
     }
 
+    useEffect(() => {
+        downloadAvatar();
+    }, [profile])
+
     return (
         <header className="sticky top-0 z-50" aria-label="Navbar">
             <nav
-                className="navbar bg-base-100 shadow-sm relative lg:px-6.5 px-3 lg:py-6.5 py-5.5"
+                className="navbar bg-base-100 shadow-sm relative lg:px-6.5 px-3 2xl:py-8.5 lg:py-7.5 py-5.5"
                 role="navigation"
                 aria-label="Primary"
             >
                 <section className="navbar-start">
-                    <NavLink className="font-medium text-[22.5px] inline-flex font-aldrich uppercase pt-1.5" to="/">
+                    <NavLink className="font-medium 2xl:text-[28.5px] lg:text-[24.5px] text-[22.5px] inline-flex font-aldrich uppercase pt-1.5" to="/">
                         Rehacktor
                     </NavLink>
                 </section>
@@ -29,30 +46,29 @@ export default function Navbar() {
                             user && (
                                 <>
                                     <div tabIndex={0} role="button" className="btn btn-link avatar p-0">
-                                        <div className="w-10 rounded-full">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                fill="#7C7C7C"
-                                                viewBox="0 0 600 600"
-                                                aria-label="Apri menù utente"
-                                            >
-                                                <path d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z" />
-                                            </svg>
+                                        <div className="2xl:w-15 w-12 rounded-full">
+                                            <img
+                                                src={avatar ? avatar : defaultIcon}
+                                                alt="Avatar utente"
+                                            />
                                         </div>
                                     </div>
                                     <ul
                                         tabIndex="-1"
-                                        className="menu text-[15.3px] dropdown-content bg-base-200 rounded-[4px] z-1 mt-1 w-46 p-2 shadow">
-                                        <li>
-                                            <a className="justify-between">
+                                        className="menu dropdown-content 2xl:text-[19.5px] lg:text-[17.5px] text-[15.5px] bg-base-200 rounded-[8px] z-1 mt-1 2xl:w-60 w-50 p-2.5 shadow">
+                                        <li className="mb-1">
+                                            <NavLink className="aria-[current]:bg-[#2E333A]" end to={`/auth/profile`}>
                                                 Profilo
-                                            </a>
+                                            </NavLink>
                                         </li>
                                         <li>
-                                            <a>Impostazioni</a>
+                                            <NavLink className="aria-[current]:bg-[#2E333A]" to={`/auth/profile/settings`}>
+                                            Impostazioni
+                                            </NavLink>
                                         </li>
+                                        <hr className="my-2 border-zinc-500" />
                                         <li onClick={handleLogout}>
-                                            <a>Logout</a>
+                                            <a className="btn btn-primary 2xl:text-[19.5px] lg:text-[17.5px] text-[15.5px]">Logout</a>
                                         </li>
                                     </ul>
                                 </>
@@ -72,7 +88,7 @@ export default function Navbar() {
                                     </div>
                                     <ul
                                         tabIndex="-1"
-                                        className="menu text-[15.3px] dropdown-content bg-base-200 rounded-[4px] z-1 mt-1 w-46 p-2 shadow">
+                                        className="menu 2xl:text-[19.5px] lg:text-[17.5px] text-[15.5px] dropdown-content bg-base-200 rounded-[4px] z-1 mt-1 2xl:w-60 w-50 p-2 shadow">
                                         <li>
                                             <NavLink to={`/auth/register`}>Registrazione</NavLink>
                                         </li>

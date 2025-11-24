@@ -4,9 +4,9 @@ export default function Sidebar({ genres }) {
     return (
         <>
             <label htmlFor="genres-drawer" className="drawer-overlay xs:backdrop-blur-xs"></label>
-            <ul className="menu bg-base-200 min-h-full xs:w-100 w-screen p-0 text-[16px]">
+            <ul className="menu bg-base-200 min-h-full xs:w-100 w-screen p-0 2xl:text-[20px] text-[17px]">
                 <div className="p-6 mb-2 flex justify-between items-center w-full bg-base-100 sticky top-0 z-1">
-                    <h2 className="font-bold text-[25px]">Seleziona genere</h2>
+                    <h2 className="font-bold 2xl:text-[27px] text-[25px]">Seleziona genere</h2>
                     <label 
                             htmlFor="genres-drawer"
                             className="btn btn-circle shadow-none text-neutral-content border-0 [&>svg]:brightness-100 hover:[&>svg]:brightness-90"

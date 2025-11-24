@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import heroBg from "../../assets/images/hero-image.jpg"
+import heroBg from "../../assets/images/bg/hero-image.jpg"
 import { useState } from "react"
 
 export default function HomeHeader() {
@@ -23,7 +23,7 @@ export default function HomeHeader() {
 
     return (
         <section aria-label="Header section">
-            <header className="hero md:min-h-[80vh] min-h-[67vh]" style={{ backgroundImage: `url(${heroBg})` }}>
+            <header className="hero 2xl:min-h-[70vh] md:min-h-[80vh] min-h-[67vh]" style={{ backgroundImage: `url(${heroBg})` }}>
                 <div className="hero-overlay backdrop-brightness-67 backdrop-blur-[1.5px]"/>
                 <div className="hero-content text-neutral-content text-center">
                     <div className="max-w-2xl">

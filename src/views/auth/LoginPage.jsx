@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router";
 import { UserContext } from "../../context/UserContext";
 
-import bgRegister from "../../assets/images/register-bg-image.jpg"
+import bgRegister from "../../assets/images/bg/register-bg-image.jpg"
 import LoginPageHeader from "../../components/LoginPageComponents/LoginPageHeader";
 
 export default function LoginPage() {
@@ -49,12 +49,12 @@ export default function LoginPage() {
                 <form onSubmit={handleSubmit(onSubmit)} className="md:self-center">
                     <fieldset className="fieldset bg-base-200/40 border-base-300 rounded-box md:w-sm w-auto border p-4 lg:mx-0 mx-5">
                         {errorMessage && (
-                            <p className="mb-5 p-4 bg-error rounded-box text-[15px]">
+                            <p className="mb-5 p-4 bg-error rounded-box text-[18px]">
                                 {errorMessage}
                             </p>
                         )}
                         {successMessage && (
-                            <p className="mb-5 p-4 bg-success rounded-box text-[15px]">
+                            <p className="mb-5 p-4 bg-success rounded-box text-[18px]">
                                 {successMessage}
                             </p>
                         )}

@@ -1,6 +1,6 @@
 export default function RegisterPageHeader() {
     return (
-        <section aria-label="Header section" className="">
+        <section aria-label="Header section">
             <header>
                 <div className="text-neutral-content lg:text-start text-center py-11">
                     <div className="max-w-lg">

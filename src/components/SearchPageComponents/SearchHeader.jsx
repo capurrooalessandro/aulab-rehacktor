@@ -1,12 +1,12 @@
 import { useParams } from "react-router"
-import heroBg from "../../assets/images/hero-image.jpg"
+import heroBg from "../../assets/images/bg/hero-image.jpg"
 
 
 export default function SearchHeader() {
     const { slug } = useParams();
     return (
         <section aria-label="Header section">
-            <header className="hero md:min-h-[70vh] min-h-[63vh]" style={{ backgroundImage: `url(${heroBg})` }}>
+            <header className="hero 2xl:min-h-[66vh] md:min-h-[70vh] min-h-[63vh]" style={{ backgroundImage: `url(${heroBg})` }}>
                 <div className="hero-overlay backdrop-brightness-67 backdrop-blur-[1.5px]"/>
                 <div className="hero-content text-neutral-content text-center">
                     <div className="max-w-lg">

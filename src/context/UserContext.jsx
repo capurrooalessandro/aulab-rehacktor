@@ -20,6 +20,17 @@ export function UserContextProvider({ children }) {
         }
     };
 
+    const updateProfile = async (newProfile) => {
+        const { data, error } = await supabase
+        .from("profiles")
+        .update(newProfile)
+        .eq("id", user.id)
+        .select();
+
+        await getUser();
+        return { data, error };
+    };
+
     useEffect (() => {
         getUser();
     }, []);
@@ -45,7 +56,7 @@ export function UserContextProvider({ children }) {
 
 
     return (
-        <UserContext.Provider value={{ user, profile, getUser, signUp, signIn, signOut }}>
+        <UserContext.Provider value={{ user, profile, getUser, signUp, signIn, signOut, updateProfile }}>
             {children}
         </UserContext.Provider>
     )
