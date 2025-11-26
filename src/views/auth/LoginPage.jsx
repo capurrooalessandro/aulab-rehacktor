@@ -26,11 +26,8 @@ export default function LoginPage() {
 
 
         if (error) {
-            console.error(error);
-            if (error.message === "invalid login credentials") {
+            if (error.message === "Invalid login credentials") {
                 setErrorMessage("Email o password non corretti.");
-            } else if (error.message === "Email not confirmed") {
-                setErrorMessage("Devi prima confermare il tuo indirizzo email.");
             } else {
                 setErrorMessage("Si è verificato un errore durante l'accesso. Riprova.");
             }

@@ -100,7 +100,7 @@ export default function DetailSection({ game }) {
 					</aside>
 				</div>
 				<article
-					className={`${game.description_raw.length < 800 ? "h-fit" : "h-70"} 2xl:w-[97%] w-full flex flex-col self-center mx-auto overflow-y-scroll no-scrollbar bg-base-300/60 backdrop-blur-sm rounded-lg`}
+					className={`${game.description_raw.length < 800 ? "h-fit" : "h-70"} 2xl:w-[97%] lg:mb-0 mb-5 w-full flex flex-col self-center mx-auto overflow-y-scroll no-scrollbar bg-base-300/60 backdrop-blur-sm rounded-lg`}
 					aria-label="Informazioni"
 				>
 					<h4 className="font-bold lg:text-[22px] text-[19px] sticky top-0 bg-base-100 py-3 px-3.5">
@@ -113,8 +113,8 @@ export default function DetailSection({ game }) {
 				</article>
 				{
 					profile && (
-						<div className="flex flex-col-reverse lg:flex-row gap-8 w-full py-20">
-							<UserSection game={game} profile_id={profile.id}/>
+						<div className="flex flex-col lg:flex-row gap-8 w-full lg:py-20">
+							<UserSection game={game} profile={profile}/>
 						</div>
 					)
 				}

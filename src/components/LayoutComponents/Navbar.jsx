@@ -48,7 +48,7 @@ export default function Navbar() {
                                     <div tabIndex={0} role="button" className="btn btn-link avatar p-0">
                                         <div className="2xl:w-15 w-12 rounded-full">
                                             <img
-                                                src={avatar ? avatar : defaultIcon}
+                                                src={avatar ?? defaultIcon}
                                                 alt="Avatar utente"
                                             />
                                         </div>
@@ -75,14 +75,15 @@ export default function Navbar() {
                             ) || (
                                 <>
                                     <div tabIndex={0} role="button" className="btn btn-base-300 rounded-lg lg:p-2 p-1.5">
-                                        <div className="w-8 rounded-full">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                fill="currentColor"
-                                                viewBox="0 0 24 24"
-                                                aria-label="Apri menù a tendina"
+                                        <div className="w-8 pb-1 rounded-full">
+                                            <svg 
+                                                xmlns="http://www.w3.org/2000/svg" 
+                                                className="h-7 w-8"
+                                                fill="none" 
+                                                viewBox="0 0 24 24" 
+                                                stroke="currentColor"
                                             >
-                                                <path d="M12,10c-1.1,0-2,0.9-2,2s0.9,2,2,2s2-0.9,2-2S13.1,10,12,10z M5,10c-1.1,0-2,0.9-2,2s0.9,2,2,2s2-0.9,2-2S6.1,10,5,10z M19,10c-1.1,0-2,0.9-2,2s0.9,2,2,2s2-0.9,2-2S20.1,10,19,10z" />
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2 6h21m-21 8h21m-21 8h21" /> 
                                             </svg>
                                         </div>
                                     </div>

@@ -30,7 +30,7 @@ export default function Sidebar({ genres }) {
                 {
                     genres.map((genre) => {
                         return (
-                            <li className="px-2 py-1" key={genre.id}>
+                            <li className="2xl:px-3.5 px-3 py-1" key={genre.id}>
                                 <NavLink className="aria-[current=page]:bg-neutral-600" to={`/genre/${genre.slug}`}>{genre.name}</NavLink>
                             </li>
                         )

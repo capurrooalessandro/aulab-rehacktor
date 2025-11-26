@@ -8,6 +8,7 @@ import { Link } from "react-router"
 export default function ProfilePage() {
     const { user, profile } = useContext(UserContext);
     const [userFavorites, setUserFavorites] = useState();
+    const [userReviews, setUserReviews] = useState();
     const [avatar, setAvatar] = useState();
     console.log("Profilo:", profile);
     console.log("Utente", user);
@@ -30,9 +31,18 @@ export default function ProfilePage() {
         setUserFavorites(favourites);
     }
 
+    const getReviews = async () => {
+        let { data: reviews, error } = await supabase
+            .from("reviews")
+            .select("*")
+            .eq("profile_id", profile.id)
+        setUserReviews(reviews);
+    }
+
     useEffect(() => {
-        downloadAvatar();
+        getReviews();
         getFavourites();
+        downloadAvatar();
     }, [profile])
 
     return (
@@ -93,8 +103,8 @@ export default function ProfilePage() {
                                         <h2 className="card-title lg:text-[24px] text-[22px]">Attività utente:</h2>
                                     </div>
                                     <div>
-                                        <p>Giochi preferiti: {userFavorites ? userFavorites.length : "Caricamento in corso..."}</p>
-                                        <p>Recensioni pubblicate:</p>
+                                        <p>Giochi preferiti: {userFavorites ? userFavorites.length : "Caricamento..."}</p>
+                                        <p>Recensioni pubblicate: {userReviews ? userReviews.length : "Caricamento..."} </p>
                                     </div>
                                 </div>
                             </div>
