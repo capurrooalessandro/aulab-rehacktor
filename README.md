@@ -1,16 +1,17 @@
-# React + Vite
+# Reactor (Aulab Hackademy+ Specializzazione ReactJs)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    Esercitazione svolta nel corso di Aulab Hackademy+ per la Specializzazione in ReactJs.
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    Web app in *React* (SPA) per esplorare titoli videoludici: schede con dettagli, ricerca e filtri **per genere**, recensioni e gestione dei preferiti, con possibilità di **registrarsi** e **accedere** al proprio account. Interfaccia *responsive*, routing con *React Router* e state management gestito con *React Hooks*; integrazione a *REST API* tramite RAWG e *Supabase* per persistenza dei dati e autenticazione utenti.
 
-## React Compiler
+## Linguaggi e servizi utilizzati
+    - React/Vite (per la funzionalità);
+        - React Router (per il routing);
+        - React Hook Form (per la validazione dei form);
+        - React Icons (per le icone);
+    - TailwindCSS (per lo stile);
+    - Supabase (servizio di database PostgreSQL);
+    - daisyUI (plugin TailwindCSS per stile avanzato)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
