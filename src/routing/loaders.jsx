@@ -20,7 +20,7 @@ export async function getSelectedGenre({ params }) {
 export async function getGameDetails({ params }) {
     const promise = await fetch(`https://api.rawg.io/api/games/${params.id}?key=${import.meta.env.VITE_API_KEY}`);
     const json = await promise.json();
-    console.log(json);
+    //console.log(json);
     
     return json;
 }
