@@ -64,6 +64,9 @@ const router = createBrowserRouter([
         path: routes.detail,
         Component: DetailPage,
         loader: getGameDetails
+    },
+    {
+        basename: import.meta.env.BASE_URL,
     }
 ])
 
