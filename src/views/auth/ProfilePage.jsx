@@ -10,8 +10,8 @@ export default function ProfilePage() {
     const [userFavorites, setUserFavorites] = useState();
     const [userReviews, setUserReviews] = useState();
     const [avatar, setAvatar] = useState();
-    console.log("Profilo:", profile);
-    console.log("Utente", user);
+    //console.log("Profilo:", profile);
+    //console.log("Utente", user);
 
     const downloadAvatar = async () => {
         if (profile) {
