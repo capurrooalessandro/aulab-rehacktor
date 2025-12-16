@@ -15,3 +15,6 @@ Interfaccia *responsive*, routing con *React Router* e state management gestito 
 - Supabase (servizio di database PostgreSQL)
 - daisyUI (plugin TailwindCSS per stile avanzato)
 
+## Link preview
+Puoi provare il sito cliccando il link seguente: ([https://capurrooalessandro.github.io/aulab-rehacktor/])
+
